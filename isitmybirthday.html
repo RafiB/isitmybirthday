@@ -1,0 +1,25 @@
+<html>
+<script>
+function checkDate() {
+    var month = parseInt(document.getElementById("month").value);
+    var day = parseInt(document.getElementById("day").value);
+    var now = new Date();
+
+    if (now.getMonth() + 1 === month && now.getDate() === day) {
+        document.getElementById("answer").textContent = "Yes, happy birthday :)";
+    } else {
+        document.getElementById("answer").textContent = "No it is not your birthday";
+    }
+}
+</script>
+<body>
+Is it my birthday today?
+<form>
+<input type="number" id="month" placeholder="month">
+<input type="number" id="day" placeholder="day">
+<button type="button" onClick="checkDate()">Is it my birthday?</button>
+</form>
+<span id="answer" style="font-size: 100px;">
+</span>
+</body>
+</html>
